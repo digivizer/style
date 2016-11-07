@@ -1,0 +1,142 @@
+AllCops:
+  TargetRubyVersion: 2.3
+
+AccessorMethodName:
+  Enabled: false
+
+GuardClause:
+  Enabled: false
+
+StringLiterals:
+  Enabled: false
+
+BracesAroundHashParameters:
+  Enabled: false
+
+SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+
+SpaceAroundEqualsInParameterDefault:
+  EnforcedStyle: no_space
+
+SpaceInsideHashLiteralBraces:
+  Enabled: false
+
+SpaceBeforeFirstArg:
+  Enabled: false
+
+HashSyntax:
+  EnforcedStyle: hash_rockets
+
+ClassLength:
+  Max: 180
+
+ColonMethodCall:
+  Enabled: false
+
+Documentation:
+  Enabled: false
+
+IfUnlessModifier:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 160
+
+Loop:
+  Enabled: true
+
+Style/MethodCallParentheses:
+  Enabled: false
+
+# DGVZMethodLength:
+#   Enabled: true
+#   Max: 23
+#   Blacklist:
+#     - .error
+#     - .info
+#     - .debug
+#     - .fatal
+#     - .trace
+
+MethodLength:
+  Max: 23
+  Enabled: false
+
+NilComparison:
+  Enabled: false
+
+ParenthesesAroundCondition:
+  Enabled: false
+
+Style/TernaryParentheses:
+  Enabled: true
+  EnforcedStyle: require_parentheses
+
+RedundantSelf:
+  Enabled: false
+
+TrivialAccessors:
+  Enabled: false
+
+Void:
+  Enabled: false
+
+WordArray:
+  Enabled: false
+
+AsciiIdentifiers:
+  Enabled: false
+
+AsciiComments:
+  Enabled: false
+
+Style/CollectionMethods:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/CommentAnnotation:
+  Enabled: true
+
+Style/DocumentationMethod:
+  Enabled: true
+
+Style/Lambda:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+Style/EmptyLinesAroundClassBody:
+  Enabled: true
+  EnforcedStyle: empty_lines
+
+Style/EmptyLinesAroundModuleBody:
+  Enabled: true
+  EnforcedStyle: empty_lines
+
+Metrics/AbcSize:
+  Enabled: false
+
+Style/MultilineBlockChain:
+  Enabled: false
+
+Style/RescueModifier:
+  Enabled: false
+
+Style/NegatedIf:
+  Enabled: false
+
+Performance/RedundantBlockCall:
+  Enabled: false
+
+Style/SignalException:
+  Enabled: false
+
+Style/EmptyLiteral:
+  Enabled: false
+
+Style/MutableConstant:
+  Enabled: false
