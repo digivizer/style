@@ -46,7 +46,7 @@ Metrics/LineLength:
 Loop:
   Enabled: true
 
-Style/MethodCallParentheses:
+Style/MethodCallWithoutArgsParentheses:
   Enabled: false
 
 # DGVZMethodLength:
@@ -109,11 +109,11 @@ Style/Lambda:
 Style/SignalException:
   Enabled: false
 
-Style/EmptyLinesAroundClassBody:
+Layout/EmptyLinesAroundClassBody:
   Enabled: true
   EnforcedStyle: empty_lines
 
-Style/EmptyLinesAroundModuleBody:
+Layout/EmptyLinesAroundModuleBody:
   Enabled: true
   EnforcedStyle: empty_lines
 
