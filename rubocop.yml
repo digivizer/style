@@ -140,3 +140,12 @@ Style/EmptyLiteral:
 
 Style/MutableConstant:
   Enabled: false
+
+Metrics/BlockLength:
+  ExcludedMethods: ['describe', 'context']
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'test/**/*.rb'
+    - 'spec/**/*.rb'
+    - 'spec/*.rb'
