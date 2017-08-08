@@ -1,5 +1,7 @@
 AllCops:
   TargetRubyVersion: 2.3
+  Excludes:
+    - 'db/schema.rb'
 
 AccessorMethodName:
   Enabled: false
