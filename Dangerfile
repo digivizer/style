@@ -8,6 +8,9 @@ rubocop.lint({:force_exclusion => true})
 # Make it more obvious that a PR is a work in progress and shouldn't be merged yet
 warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
 
+# Let's track all our PRs
+fail("PR must reference JIRA") unless github.pr_title.match(/\[.*-[0-9]*\]/)
+
 # Warn when there is a big PR
 warn("Big PR") if git.lines_of_code > 500
 
