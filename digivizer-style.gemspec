@@ -7,7 +7,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'digivizer-style'
-  spec.version       = '1.1'
+  spec.version       = '1.2'
   spec.authors       = ['Digivizer Developer']
   spec.email         = ['dev-accounts@digivizer.com']
   spec.description   = 'The Digivizer Manual of Style'
