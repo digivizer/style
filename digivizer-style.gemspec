@@ -7,13 +7,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'digivizer-style'
-  spec.version       = '1.2'
+  spec.version       = '3.0'
   spec.authors       = ['Digivizer Developer']
   spec.email         = ['dev-accounts@digivizer.com']
   spec.description   = 'The Digivizer Manual of Style'
   spec.summary       = 'This gem contains a rubocop configuration for Digivizer'
   spec.homepage      = ''
   spec.license       = 'MIT'
+  spec.metadata      = { "github_repo" => "https://github.com/digivizer/style.git" }
 
   spec.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }

@@ -1,96 +1,72 @@
 AllCops:
-  TargetRubyVersion: 2.3
+  TargetRubyVersion: 2.6
   Exclude:
-    - 'db/schema.rb'
+    - 'db/schema.rb' # ignore generated schema
+    - 'app/rpc/*' # ignore generated twirp code
+    - 'bin/*'
 
-AccessorMethodName:
+Naming/AccessorMethodName:
   Enabled: false
 
-GuardClause:
+Naming/AsciiIdentifiers:
   Enabled: false
 
-StringLiterals:
+Style/GuardClause:
   Enabled: false
 
-BracesAroundHashParameters:
-  Enabled: false
+Style/StringLiterals:
+  Description: 'Checks if uses of quotes match the configured preference.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#consistent-string-literals'
+  EnforcedStyle: double_quotes
+  Enabled: true
 
-SpaceInsideHashLiteralBraces:
+Layout/SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 
-SpaceAroundEqualsInParameterDefault:
+Layout/SpaceAroundEqualsInParameterDefault:
   EnforcedStyle: no_space
 
-SpaceInsideHashLiteralBraces:
+Layout/SpaceInsideHashLiteralBraces:
   Enabled: false
 
-SpaceBeforeFirstArg:
+Layout/SpaceBeforeFirstArg:
   Enabled: false
 
-HashSyntax:
+Style/HashSyntax:
   EnforcedStyle: hash_rockets
 
-ClassLength:
-  Max: 180
-
-ColonMethodCall:
+Style/ColonMethodCall:
   Enabled: false
 
-Documentation:
+Style/Documentation:
   Enabled: false
 
-IfUnlessModifier:
+Style/IfUnlessModifier:
   Enabled: false
-
-Metrics/LineLength:
-  Max: 160
-
-Loop:
-  Enabled: true
 
 Style/MethodCallWithoutArgsParentheses:
   Enabled: false
 
-# DGVZMethodLength:
-#   Enabled: true
-#   Max: 23
-#   Blacklist:
-#     - .error
-#     - .info
-#     - .debug
-#     - .fatal
-#     - .trace
-
-MethodLength:
-  Max: 23
+Style/NilComparison:
   Enabled: false
 
-NilComparison:
-  Enabled: false
-
-ParenthesesAroundCondition:
+Style/ParenthesesAroundCondition:
   Enabled: false
 
 Style/TernaryParentheses:
   Enabled: true
   EnforcedStyle: require_parentheses
 
-RedundantSelf:
+Style/RedundantSelf:
   Enabled: false
 
-TrivialAccessors:
+Style/TrivialAccessors:
   Enabled: false
 
-Void:
+Style/WordArray:
   Enabled: false
 
-WordArray:
-  Enabled: false
-
-AsciiIdentifiers:
-  Enabled: false
-
-AsciiComments:
+Style/AsciiComments:
   Enabled: false
 
 Style/CollectionMethods:
@@ -111,9 +87,6 @@ Style/Lambda:
 Style/SignalException:
   Enabled: false
 
-Metrics/AbcSize:
-  Enabled: false
-
 Style/MultilineBlockChain:
   Enabled: false
 
@@ -121,9 +94,6 @@ Style/RescueModifier:
   Enabled: false
 
 Style/NegatedIf:
-  Enabled: false
-
-Performance/RedundantBlockCall:
   Enabled: false
 
 Style/SignalException:
@@ -135,6 +105,19 @@ Style/EmptyLiteral:
 Style/MutableConstant:
   Enabled: false
 
+Metrics/ClassLength:
+  Max: 180
+
+Metrics/LineLength:
+  Max: 160
+
+Metrics/MethodLength:
+  Max: 23
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
 Metrics/BlockLength:
   ExcludedMethods: ['describe', 'context']
   Exclude:
@@ -143,3 +126,13 @@ Metrics/BlockLength:
     - 'test/**/*.rb'
     - 'spec/**/*.rb'
     - 'spec/*.rb'
+
+Lint/Loop:
+  Enabled: true
+
+Lint/Void:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "spec/**/*" # disable for rspec idioms
