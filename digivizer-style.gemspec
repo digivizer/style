@@ -14,6 +14,7 @@ Gem::Specification.new do |spec|
   spec.summary       = 'This gem contains a rubocop configuration for Digivizer'
   spec.homepage      = ''
   spec.license       = 'MIT'
+  spec.metadata      = { "github_repo" => "https://github.com/digivizer/style.git" }
 
   spec.files         = `git ls-files`.split($INPUT_RECORD_SEPARATOR)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
