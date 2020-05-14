@@ -3,6 +3,7 @@ AllCops:
   Exclude:
     - 'db/schema.rb' # ignore generated schema
     - 'app/rpc/*' # ignore generated twirp code
+    - 'rpc/*' # ignore generated twirp code
     - 'bin/*'
 
 Naming/AccessorMethodName:
