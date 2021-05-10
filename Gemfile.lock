@@ -101,7 +101,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.3)
+  bundler (>= 2.1.0)
   danger
   danger-rubocop
   digivizer-style!
@@ -109,4 +109,4 @@ DEPENDENCIES
   rspec (~> 3.5)
 
 BUNDLED WITH
-   1.16.1
+   2.1.4
