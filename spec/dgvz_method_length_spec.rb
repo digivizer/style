@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 require 'spec_helper'
@@ -6,8 +5,7 @@ require './lib/dgvz_method_length'
 
 describe RuboCop::Cop::Metrics::DGVZMethodLength, :config do
   subject(:cop) { described_class.new(config) }
-  let(:cop_config) { { 'Max' => 5,  'Blacklist' => ['.error', '.info', '.debug', '.fatal', '.trace'] } }
-
+  let(:cop_config) { { 'Max' => 5, 'Blacklist' => ['.error', '.info', '.debug', '.fatal', '.trace'] } }
 
   it 'accept a method with .error' do
     inspect_source(cop, ['def m',
