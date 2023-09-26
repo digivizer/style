@@ -1,5 +1,4 @@
 AllCops:
-  TargetRubyVersion: 2.7
   Exclude:
     - 'db/schema.rb' # ignore generated schema
     - 'app/rpc/*' # ignore generated twirp code
