@@ -1,4 +1,3 @@
-# encoding: utf-8
 # frozen_string_literal: true
 
 module RuboCop
@@ -18,7 +17,7 @@ module RuboCop
         end
 
         def message(length, max_length)
-          format('Method has far too many lines. [%d/%d]', length, max_length)
+          format('Method has far too many lines. [%<length>d/%<max_length>d]', :length => length, :max_length => max_length)
         end
 
         def code_length(node)

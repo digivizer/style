@@ -1,5 +1,5 @@
-# encoding: utf-8
 # frozen_string_literal: true
+
 # author: Harry Lee
 
 module RuboCop
@@ -14,9 +14,9 @@ module RuboCop
       #   raise e
       # end
       class RaiseException < Cop
-        MSG = 'Raise strings or constants, not variables.'.freeze
+        MSG = 'Raise strings or constants, not variables.'
 
-        ALLOWED_TYPES = [:const, :str]
+        ALLOWED_TYPES = %i[const str]
 
         def on_send(node)
           return unless node.command?(:raise)
