@@ -7,7 +7,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = 'digivizer-style'
-  spec.version       = '4.0'
+  spec.version       = '6.0'
   spec.authors       = ['Digivizer Developer']
   spec.email         = ['dev-accounts@digivizer.com']
   spec.description   = 'The Digivizer Manual of Style'
@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'rubocop', '~> 0.53'
+  spec.add_dependency 'rubocop'
 
   spec.add_development_dependency 'bundler', '>= 2.1.0'
   spec.add_development_dependency 'danger'
